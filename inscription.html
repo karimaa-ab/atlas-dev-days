@@ -39,88 +39,146 @@
 
     <main>
 
-    <h1>Formulaire</h1>
+        <h1>Formulaire</h1>
 
-    <section class="registration-form">
+        <section class="registration-form">
 
-        <form>
+            <form>
 
-            <div class="form-group">
+               <div class="form-group">
 
-                <label>Nom Complet</label>
+                    <label for="fullname">Nom Complet</label>
 
-                <input type="text" placeholder="Votre nom et prénom" >
+                    <input type="text" id="fullname" name="fullname" placeholder="Votre nom et prénom" required minlength="3">
 
-            </div>
+                </div>
 
-            <div class="form-group">
+                <div class="form-group">
 
-                <label>Adresse Email</label>
+                    <label for="email">Adresse Email</label>
 
-                <input type="email" placeholder="votre.email@example.com">
+                    <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
 
-            </div>
+                </div>
 
-            <div class="form-group">
+                <div class="form-group">
 
-                <label>Numéro de téléphone</label>
+                    <label for="phone">Numéro de téléphone</label>
 
-                <input type="tel" placeholder="06XXXXXXXX">
+                    <input type="tel" id="phone" name="phone" required pattern="^((\+212|0)[5-7][0-9]{8})$" placeholder="06XXXXXXXX">
 
-            </div>
+                </div>
 
-            <div class="form-group">
+                <div class="form-group">
 
-                <label>Choix du Jour</label>
+                    <label for="profile">Profil</label>
 
-                <select>
+                    <select id="profile" name="profile" required>
+                        <option value="" disabled selected>Choisissez votre profil</option>
+                        <option value="etudiant">Étudiant-e</option>
+                        <option value="developpeur">Développeur-se</option>
+                        <option value="autre">Autre</option>
+                    </select>
 
-                    <option>Les deux jours (5 et 6 Octobre)</option>
-                    <option>Jour 1 - 5 octobre</option>
-                    <option>Jour 2 - 6 octobre</option>
+                </div>
 
-                </select>
+                <div class="form-group">
 
-            </div>
+                    <label>Journée(s) de participation</label>
 
-            <div class="form-group">
+                    <div class="radio-group">
 
-                <input type="checkbox">
+                        <input type="radio" id="jour1" name="days" value="Jour 1" required>
 
-                <label>J'accepte les conditions d'utilisation</label>
+                        <label for="jour1">Jour 1 (5 octobre)</label>
+                        
+                        <input type="radio" id="jour2" name="days" value="Jour 2">
 
-            </div>
+                        <label for="jour2">Jour 2 (6 octobre)</label>
+                        
+                        <input type="radio" id="lesdeux" name="days" value="Les deux">
 
-            <button>S'INSCRIRE</button>
+                        <label for="lesdeux">Les deux jours</label>
 
-        </form>
+                    </div>
 
-    </section>
+                </div>
 
-    <section class="info-pratiques">
+                <div class="form-group">
 
-        <h2>Informations pratiques</h2>
+                    <label>Ateliers souhaités</label>
 
-        <p>
-            <strong>Lieu :</strong> Casablanca, Maroc
-        </p>
+                    <div class="checkbox-group">
 
-        <p>
-            <strong>Date :</strong> 5 - 6 Octobre 2026
-        </p>
+                        <input type="checkbox" id="atelier-flexbox" name="ateliers" value="flexbox">
+                        <label for="atelier-flexbox">Flexbox & Layouts</label>
 
-        <p>
-            <strong>Contact :</strong> contact@atlasdevdays.ma
-        </p>
+                        <input type="checkbox" id="atelier-figma" name="ateliers" value="figma">
+                        <label for="atelier-figma">Design System Figma</label>
 
-    </section>
+                        <input type="checkbox" id="atelier-seo" name="ateliers" value="seo">
+                        <label for="atelier-seo">Optimisation & SEO</label>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">Message (optionnel)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Votre message..."></textarea>
+
+                </div>
+
+                <div class="form-group terms-group">
+
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">J'accepte les conditions d'utilisation</label>
+
+                </div>
+
+                <button>S'INSCRIRE</button>
+
+            </form>
+
+        </section>
+
+        <section class="info-pratiques">
+
+            <h2>Informations pratiques</h2>
+
+            <p><strong>Lieu :</strong> Casablanca, Maroc</p>
+
+            <p><strong>Date :</strong> 5 - 6 Octobre 2026</p>
+
+            <p><strong>Contact :</strong> contact@atlasdevdays.ma</p>
+
+        </section>
 
     </main>
 
-    <footer>
-        <p>© 2026 Atlas Dev Days - <a href="https://validator.w3.org/">validator W3C</a></p>
-    </footer>
+<footer>
+    <div class="footer-contact">
 
+        <p><strong>Contact :</strong> contact@atlasdevdays.ma | +212 5 22 00 00 00</p>
+
+    </div>
+
+    <div class="footer-socials">
+
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a> - 
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a> - 
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+
+    </div>
+
+    <div class="footer-mentions">
+
+        <p>© 2026 Atlas Dev Days - Tous droits réservés - <a href="https://validator.w3.org/" target="_blank" rel="noopener">validator W3C</a></p>
+
+    </div>
+
+</footer>
 </body>
 </html>
 
