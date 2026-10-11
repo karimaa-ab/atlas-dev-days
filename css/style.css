@@ -553,4 +553,115 @@ main > h1 {
     }
 }
 /* Intervenants Page Styles */
-
+main {
+    padding: 50px 8%;
+    background-color: var(--bg-main);
+    text-align: center;
+}
+main > h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.speakers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.speaker-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    text-align: center;
+}
+.speaker-card:hover {
+    transform: translateY(-5px);
+}
+.speaker-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #ffffff;
+}
+.speaker-card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.speaker-card .role {
+    font-size: 13px;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.speaker-card p {
+    font-size: 14px;
+    color: #444444;
+    margin-bottom: 15px;
+}
+.speaker-card a {
+    font-size: 13px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 2px;
+}
+.speaker-card a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+@media (max-width: 768px) {
+    main {
+        padding: 25px 15px;
+    }
+    main > h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .speakers-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .speaker-card {
+        width: 100%;
+        max-width: 320px;
+        flex-direction: column; /* نخليوها عمودية فالموبايل باش يقدو التصويرة، الاسم، الوصف وLinkedIn يبانو مزيان ممتراكبينش */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 10px;
+    }
+    .speaker-card img {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 5px;
+    }
+    .speaker-card h2 {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    .speaker-card .role {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .speaker-card p {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    .speaker-card a {
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
